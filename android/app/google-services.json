@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "636769531084",
+    "firebase_url": "https://team-balance-default-rtdb.firebaseio.com",
+    "project_id": "team-balance",
+    "storage_bucket": "team-balance.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:636769531084:android:ad28ab6724766d82073e69",
+        "android_client_info": {
+          "package_name": "com.officebook.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "636769531084-f9j1j7e8ghlsns3gb6vkpavot28uel3e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGoa6_qcNxMRtWE6azAGQmFOqc1jqg-Io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "636769531084-f9j1j7e8ghlsns3gb6vkpavot28uel3e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

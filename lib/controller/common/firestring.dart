@@ -1,0 +1,13 @@
+const String compfire = "Company";
+const String phonefire = "Phone";
+const String passfire = "Password";
+const String leaderfire = "Leader";
+const String userfire = "Users";
+const String closingamountfire = "Closing-Amount";
+const String namefire = "Name";
+const String statementfire = "Statments";
+const String remarkfire = "Remark";
+const String debitfire = "Debit";
+const String datefire = "Date";
+const String amountfire = "Amount";
+const String lastamountfire = "LastAmount";

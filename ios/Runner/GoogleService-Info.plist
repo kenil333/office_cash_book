@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>636769531084-942bc2kkjo31tb2j323kiuneh1c3l8nn.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.636769531084-942bc2kkjo31tb2j323kiuneh1c3l8nn</string>
+	<key>API_KEY</key>
+	<string>AIzaSyASUWtH5XeYH8-d2c12X2dV9yIJZKbEOjw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>636769531084</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.app.officebook</string>
+	<key>PROJECT_ID</key>
+	<string>team-balance</string>
+	<key>STORAGE_BUCKET</key>
+	<string>team-balance.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:636769531084:ios:942bf7ccbe09a1bd073e69</string>
+	<key>DATABASE_URL</key>
+	<string>https://team-balance-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
