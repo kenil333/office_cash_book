@@ -17,6 +17,7 @@ export './../../view/screens/dashboard/bottom_bar.dart';
 export './../../view/screens/dashboard/dashboard.dart';
 export './../../view/screens/dashboard/pdf_generator.dart';
 export './../../view/screens/dashboard/profile.dart';
+export './../../view/screens/dashboard/statistics_screens.dart';
 
 export './../../view/screens/other/add_statment.dart';
 export './../../view/screens/other/team_screen.dart';
@@ -40,3 +41,4 @@ export './../../view/widgets/custom_txtbtn.dart';
 export './../../view/widgets/image_wid.dart';
 export './../../view/widgets/cust_meth.dart';
 export './../../view/widgets/clossing_amount.dart';
+export './../../view/widgets/balance_wid.dart';

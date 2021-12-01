@@ -105,12 +105,10 @@ class FirebaseConfi {
         if (csnap.value != null) {
           notdone(cmpanyalreadyinuse);
         } else {
-          await fref
-              .child(compfire)
-              .child(rcompany)
-              .child(closingamountfire)
-              .set("00.00")
-              .then(
+          await fref.child(compfire).child(rcompany).child(countclosefire).set({
+            closingamountfire: "00.00",
+            statementcountfire: 0,
+          }).then(
             (_) async {
               await fref.child(userfire).child(rphone).set({
                 compfire: rcompany,
@@ -147,18 +145,20 @@ class FirebaseConfi {
     Function done,
   ) async {
     double _closeamount = 0.0;
+    int _count = 0;
     await fref
         .child(compfire)
         .child(acompany)
-        .child(closingamountfire)
+        .child(countclosefire)
         .once()
         .then(
       (DataSnapshot csnap) async {
         if (adebit) {
-          _closeamount = double.parse(csnap.value) - aamount;
+          _closeamount = double.parse(csnap.value[closingamountfire]) - aamount;
         } else {
-          _closeamount = double.parse(csnap.value) + aamount;
+          _closeamount = double.parse(csnap.value[closingamountfire]) + aamount;
         }
+        _count = csnap.value[statementcountfire] + 1;
         await fref
             .child(compfire)
             .child(acompany)
@@ -166,20 +166,17 @@ class FirebaseConfi {
             .push()
             .set({
           namefire: auname,
+          contifire: _count,
           amountfire: aamount.toStringAsFixed(2),
           lastamountfire: _closeamount.toStringAsFixed(2),
           remarkfire: areamrk,
           datefire: adate,
           debitfire: adebit,
         }).then((_) async {
-          await fref
-              .child(compfire)
-              .child(acompany)
-              .child(closingamountfire)
-              .set(
-                _closeamount.toStringAsFixed(2),
-              )
-              .then((_) {
+          await fref.child(compfire).child(acompany).child(countclosefire).set({
+            closingamountfire: _closeamount.toStringAsFixed(2),
+            statementcountfire: _count,
+          }).then((_) {
             done();
           });
         });
@@ -194,18 +191,18 @@ class FirebaseConfi {
     double dltamount,
   ) async {
     double _finalamount = 0.0;
-    await fref
-        .child(compfire)
-        .child(dltcomp)
-        .child(closingamountfire)
-        .once()
-        .then(
+    int _count = 0;
+    await fref.child(compfire).child(dltcomp).child(countclosefire).once().then(
       (DataSnapshot cdlsnap) async {
         if (dltdebit) {
-          _finalamount = double.parse(cdlsnap.value) + dltamount;
+          _finalamount =
+              double.parse(cdlsnap.value[closingamountfire]) + dltamount;
         } else {
-          _finalamount = double.parse(cdlsnap.value) - dltamount;
+          _finalamount =
+              double.parse(cdlsnap.value[closingamountfire]) - dltamount;
         }
+        _count = cdlsnap.value[statementcountfire] - 1;
+
         await fref
             .child(compfire)
             .child(dltcomp)
@@ -214,13 +211,12 @@ class FirebaseConfi {
             .remove()
             .then(
           (_) async {
-            await fref
-                .child(compfire)
-                .child(dltcomp)
-                .child(closingamountfire)
-                .set(
-                  _finalamount.toStringAsFixed(2),
-                );
+            await fref.child(compfire).child(dltcomp).child(countclosefire).set(
+              {
+                closingamountfire: _finalamount.toStringAsFixed(2),
+                statementcountfire: _count,
+              },
+            );
           },
         );
       },

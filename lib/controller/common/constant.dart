@@ -4,6 +4,7 @@ const String officebook = "Office Book";
 const String home = "HOME";
 const String pdf = "PDF";
 const String profile = "PROFILE";
+const String statistics = "STATISTICS";
 const String team = "Team";
 const String statement = "Statement";
 const String save = "Save";

@@ -1,21 +1,10 @@
-# office_cash_book
-
 I developed a Office Cashbook App using Flutter.
 
 As a Flutter Developer, I think that State Management is a Core of Flutter. And For State Management, I used GetX Library and BLoC Pattern Together. For creating a Custom PDF as a Personal Passbook, I used a pdf package and printing package to store that PDF in the device storage.
 
 Packages Used :
 
-persistent_bottom_nav_bar
-intl
-otp_text_field
-firebase_core
-firebase_database
-firebase_auth
-get
-shared_preferences
-pdf
-printing
+persistent_bottom_nav_bar intl otp_text_field firebase_core firebase_database firebase_auth get shared_preferences pdf printing
 
 Who can use Office CashBook?
 

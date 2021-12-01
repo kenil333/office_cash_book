@@ -1,5 +1,6 @@
 class Statment {
   final String id;
+  final int count;
   final String name;
   final String remark;
   final bool debit;
@@ -9,6 +10,7 @@ class Statment {
 
   Statment({
     required this.id,
+    required this.count,
     required this.name,
     required this.remark,
     required this.debit,

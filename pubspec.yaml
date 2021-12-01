@@ -20,10 +20,12 @@ dependencies:
   firebase_core: ^1.8.0
   firebase_database: ^8.0.1
   firebase_auth: ^3.1.4
+  # firebase_messaging: ^10.0.9
   get: ^4.3.8
   shared_preferences: ^2.0.8
   pdf: ^3.6.1
   printing: ^5.6.0
+  # flutter_local_notifications: ^9.0.2
 
 dev_dependencies:
   flutter_test:

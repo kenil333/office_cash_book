@@ -27,7 +27,7 @@ class GlobalGet extends GetxController {
   List<Statment> allfiltlist() {
     List<Statment> _dummy = statlistrx;
     _dummy.sort((a, b) {
-      return a.date.compareTo(b.date);
+      return a.count.compareTo(b.count);
     });
     return _dummy;
   }
@@ -41,9 +41,63 @@ class GlobalGet extends GetxController {
       }
     }
     _stat.sort((a, b) {
-      return a.date.compareTo(b.date);
+      return a.count.compareTo(b.count);
     });
     return _stat;
+  }
+
+  double gettotalcredit(DateTime? start, DateTime? end) {
+    double _totalamount = 0;
+    for (int i = 0; i < statlistrx.length; i++) {
+      if (start != null && end != null) {
+        if (start.isBefore(end)) {
+          if (statlistrx[i].debit == false) {
+            if (statlistrx[i]
+                    .date
+                    .isAfter(start.subtract(const Duration(days: 1))) &&
+                statlistrx[i].date.isBefore(end.add(const Duration(days: 1)))) {
+              _totalamount += statlistrx[i].amount;
+            }
+          }
+        } else {
+          if (statlistrx[i].debit == false) {
+            _totalamount += statlistrx[i].amount;
+          }
+        }
+      } else {
+        if (statlistrx[i].debit == false) {
+          _totalamount += statlistrx[i].amount;
+        }
+      }
+    }
+    return _totalamount;
+  }
+
+  double gettotaldebit(DateTime? start, DateTime? end) {
+    double _totalamount = 0;
+    for (int i = 0; i < statlistrx.length; i++) {
+      if (start != null && end != null) {
+        if (start.isBefore(end)) {
+          if (statlistrx[i].debit) {
+            if (statlistrx[i]
+                    .date
+                    .isAfter(start.subtract(const Duration(days: 1))) &&
+                statlistrx[i].date.isBefore(end.add(const Duration(days: 1)))) {
+              _totalamount += statlistrx[i].amount;
+            }
+          }
+        } else {
+          if (statlistrx[i].debit) {
+            _totalamount += statlistrx[i].amount;
+          }
+        }
+      } else {
+        if (statlistrx[i].debit) {
+          _totalamount += statlistrx[i].amount;
+        }
+      }
+    }
+    return _totalamount;
   }
 
   custsnakg(String error) {

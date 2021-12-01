@@ -16,6 +16,7 @@ class DashboardScreen extends StatelessWidget {
         .reference()
         .child(compfire)
         .child(_cont.compayrx.value)
+        .child(countclosefire)
         .child(closingamountfire)
         .onValue;
     final Stream _statmentapi = FirebaseDatabase.instance
@@ -110,6 +111,7 @@ class DashboardScreen extends StatelessWidget {
                         _statmentlist.add(
                           Statment(
                             id: key,
+                            count: value[contifire],
                             name: value[namefire],
                             remark: value[remarkfire],
                             debit: value[debitfire],
@@ -123,7 +125,7 @@ class DashboardScreen extends StatelessWidget {
                     if (_statmentlist.length > 1) {
                       _statmentlist.sort(
                         (a, b) {
-                          return b.date.compareTo(a.date);
+                          return b.count.compareTo(a.count);
                         },
                       );
                     }

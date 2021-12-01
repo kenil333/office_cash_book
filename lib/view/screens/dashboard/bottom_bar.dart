@@ -15,6 +15,7 @@ class BottomBar extends StatelessWidget {
     List<Widget> _screensofbar = [
       const DashboardScreen(),
       const PdfGeneratorScreen(),
+      const StatisticsScreen(),
       const ProfileScreen(),
     ];
 
@@ -29,6 +30,12 @@ class BottomBar extends StatelessWidget {
         PersistentBottomNavBarItem(
           icon: const Icon(Icons.picture_as_pdf_outlined),
           title: (pdf),
+          activeColorPrimary: prim,
+          inactiveColorPrimary: gry,
+        ),
+        PersistentBottomNavBarItem(
+          icon: const Icon(Icons.analytics_outlined),
+          title: (statistics),
           activeColorPrimary: prim,
           inactiveColorPrimary: gry,
         ),
