@@ -1,12 +1,14 @@
-name: cashbook
-description: A new Flutter project.
+name: office_cash_book
+description: For Account Manager - Management accounting made easy, know your cash flow & work book balance. No need to calculate your daily sales cash balance manually. It will help you reconcile finance easily and maintain a record book.
+
 
 publish_to: 'none'
+
 
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.12.0 <3.0.0"
+  sdk: ">=2.17.6 <3.0.0"
 
 
 dependencies:
@@ -16,22 +18,22 @@ dependencies:
   cupertino_icons: ^1.0.2
   persistent_bottom_nav_bar: ^4.0.2
   intl: ^0.17.0
-  otp_text_field: ^1.1.1
-  firebase_core: ^1.8.0
-  firebase_database: ^8.0.1
-  firebase_auth: ^3.1.4
-  # firebase_messaging: ^10.0.9
-  get: ^4.3.8
-  shared_preferences: ^2.0.8
-  pdf: ^3.6.1
-  printing: ^5.6.0
-  # flutter_local_notifications: ^9.0.2
+  otp_text_field: ^1.1.3
+  firebase_core: ^1.19.2
+  firebase_database: ^9.0.19
+  firebase_auth: ^3.4.2
+  get: ^4.6.5
+  shared_preferences: ^2.0.15
+  pdf: ^3.8.1
+  printing: ^5.9.1
+
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_lints: ^1.0.0
+
+  flutter_lints: ^2.0.0
 
 
 flutter:
@@ -41,4 +43,3 @@ flutter:
 
   assets:
       - assets/images/
-

@@ -1,6 +1,6 @@
 {
-    "name": "cashbook",
-    "short_name": "cashbook",
+    "name": "office_cash_book",
+    "short_name": "office_cash_book",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
